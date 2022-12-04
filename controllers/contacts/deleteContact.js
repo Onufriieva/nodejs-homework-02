@@ -1,6 +1,7 @@
 const contactsOperation = require('../../models/contacts');
 const createError = require('http-errors')
 
+
 const deleteContact = async(req, res, next) => {
     try {
         const {contactId} = req.params;
@@ -20,5 +21,6 @@ const deleteContact = async(req, res, next) => {
         next(error)
     }
 }
+
 
 module.exports = deleteContact;
