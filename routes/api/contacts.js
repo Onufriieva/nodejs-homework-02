@@ -2,9 +2,12 @@ const express = require('express');
 
 const { validation } = require('../../middlewares');
 const { contactSchema } = require('../../schemas/contacts')
+
+
 const {contacts: contactController} = require('../../controllers');
 
 const validateMiddleware = validation(contactSchema);
+
 const router = express.Router();
 
 
