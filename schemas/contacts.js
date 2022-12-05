@@ -7,7 +7,7 @@ const contactSchema = Joi.object({
 })
  
 
-const schemaId = Joi.string().min(3);
+const schemaId = Joi.string().min(1);
 
 
 module.exports = {
