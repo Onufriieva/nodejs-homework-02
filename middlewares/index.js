@@ -1,6 +1,5 @@
 const validation = require('./validation');
 
 
-module.exports = {
+module.exports = 
     validation
-}
