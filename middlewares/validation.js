@@ -15,8 +15,8 @@ const validation = schema => {
 const paramValidation = schema => {
 
   return (req, res, next) => {
-
-    const { error } = schema.validate(String (req.params));
+  
+    const { error } = schema.validate(req.params);
     if (error) {
       throw createError(400, "Bad id")
     }
