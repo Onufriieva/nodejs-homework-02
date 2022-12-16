@@ -10,5 +10,6 @@ const router = express.Router();
 router.post("/singup", validation(registerSchema), authControllers.singup)
 router.post("/login", validation(loginSchema), authControllers.login)
 router.get("/current",authMiddleware, usersControllers.getCurrent)
+router.get("/logout", authMiddleware, authControllers.logout)
 
 module.exports = router;
