@@ -18,6 +18,8 @@ const login = async(req, res, next) => {
             id: user._id
         };
         const token = jwt.sign(payload, SECRET_KEY, {expiresIn: "2h"})
+
+        await user.update({ token: token });
         res.json({
             status: "success",
             code: 200,
@@ -35,5 +37,6 @@ const login = async(req, res, next) => {
         next(error)
     }
 }
+
 
 module.exports = login;

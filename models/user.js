@@ -21,18 +21,20 @@ const userSchema = new Schema(
           type: String,
           default: null,
         },
-        // owner: {
-        //     type: SchemaTypes.ObjectId,
-        //     ref: 'user',
-        //   },
-    }, {versionKey: false, timestamps: true}
+         }, {versionKey: false, timestamps: true}
 );
 
 
 
-// userSchema.methods.comparePassword = function(password){
+
+
+// userSchema.methods.setPassword = function (password) {
+//   this.password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+// };
+
+// userSchema.methods.comparePassword = function (password) {
 //   return bcrypt.compareSync(password, this.password);
-// }
+// };
 
 
 
