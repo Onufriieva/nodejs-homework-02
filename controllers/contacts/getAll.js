@@ -12,7 +12,6 @@ const getAll = async(req, res, next) => {
         const favoriteContacts = await Contact.find({ owner: _id, favorite: favorite},'',{skip, limit: Number(limit)}).populate("owner", "_id email")
    
         if (favorite) {
-          // return 
           res.json({
           status: 200,
           data: {
