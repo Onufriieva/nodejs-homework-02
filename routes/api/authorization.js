@@ -7,8 +7,8 @@ const { registerSchema, loginSchema } = require('../../schemas/authorization');
 
 const router = express.Router();
 
-router.post("/singup", validation(registerSchema),authMiddleware, authControllers.singup)
-router.post("/login", validation(loginSchema),authMiddleware, authControllers.login)
+router.post("/singup", validation(registerSchema), authControllers.singup)
+router.post("/login", validation(loginSchema), authControllers.login)
 router.get("/current",authMiddleware, usersControllers.getCurrent)
 router.get("/logout",authMiddleware, authControllers.logout)
 
